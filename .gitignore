@@ -1,32 +1,47 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <iostream>
+using namespace std;
+int main() {
+ double num1, num2, result;
+ int choice;
+ do {
+ cout<<"Menu:\n"<<"1.Addition\n"<<"2.Subtarction\n"<<"3.Multiplication\n"<<"4.Division\n"<<"5.Exit\n"<<"Enter your choice\n";
+ cin >> choice;
+ if (choice == 1) {
+ cout << "Enter your first number: ";
+ cin >> num1;
+ cout << "Enter your second number: ";
+ cin >> num2;
+ result = num1 + num2;
+ cout << "Result of the addition is: " << result << "\n";
+ } else if (choice == 2) {
+ cout << "Enter your first number: ";
+ cin >> num1;
+ cout << "Enter your second number: ";
+ cin >> num2;
+ result = num1 - num2;
+ cout << "Result of the subtraction is: " << result << "\n";
+ } else if (choice == 3) {
+ cout << "Enter your first number: ";
+ cin >> num1;
+ cout << "Enter your second number: ";
+ cin >> num2;
+ result = num1 * num2;
+ cout << "Result of the multiplication is: " << result << "\n";
+ } else if (choice == 4) {
+ cout << "Enter your first number: ";
+ cin >> num1;
+ cout << "Enter your second number: ";
+ cin >> num2;
+ if (num2 != 0) {
+ result = num1 / num2;
+ cout << "Result of the division is: " << result << "\n";
+ } else {
+ cout << "Cannot divide by zero.\n";
+ }
+ } else if (choice == 5) {
+ cout << "Exiting program\n";
+ } else {
+ cout << "Invalid entry. Please enter a number between 1 and 5.\n";
+ }
+ } while (choice != 5);
+ return 0; }
